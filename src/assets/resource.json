@@ -1,9 +1,0 @@
-{
-    "services":{
-        "sellbrite":{
-            "url":"testing",
-            "user":"",
-            "secret":""
-        }
-    }
-}
