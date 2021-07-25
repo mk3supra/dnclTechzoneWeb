@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SellbriteService } from '../services/sellbrite.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+private sellbriteService: SellbriteService;
+
+  constructor(private SellbriteService: SellbriteService) { 
+    this.sellbriteService = SellbriteService;
+  }
 
   ngOnInit(): void {
+
   }
+
+  public async OnClick(){
+    let results = await this.sellbriteService.GetInvetory();
+  }
+
+
 
 }
